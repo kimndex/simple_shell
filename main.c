@@ -5,6 +5,7 @@ int main(int ac, char **argv)
 	char *prompt = "(OurShell) ~ ";
 	char *lineptr;
 	size_t n = 0;
+	ssize_t xread_chars;
 
 	/* void variables declaration */
 	(void)ac;
@@ -14,7 +15,13 @@ int main(int ac, char **argv)
 	while (1){
 
 	printf("%s", prompt);
-	getline(&lineptr, &n, stdin);
+	xread_chars = getline(&lineptr, &n, stdin);
+	/* now we see whether EOF was reached, function failed(getline) or user input ctrl+D */
+	if (xread_chars == -1){
+		printf("Leaving shell..\n");
+		return (-1);
+	}
+
 	printf("%s\n", lineptr);
 
 
