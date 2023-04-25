@@ -11,3 +11,6 @@ int _myenv(info_t *);
 int _mysetenv(info_t *);
 int _myunsetenv(info_t *);
 int populate_env_list(info_t *);
+
+/*alias built in command task 13 */
+int _ouralias(info_t *);
