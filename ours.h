@@ -14,3 +14,6 @@ int populate_env_list(info_t *);
 
 /*alias built in command task 13 */
 int _ouralias(info_t *);
+
+/* to handle the path task 3 */
+char **find_path(char **environ)
