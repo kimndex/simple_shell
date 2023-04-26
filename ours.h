@@ -1,6 +1,14 @@
+#ifndef _OURS_H_
+#define _OURS_H_
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+
+/* for read/write buffers */
+#define READ_BUF_SIZE 1024
+#define WRITE_BUF_SIZE 1024
+#define BUF_FLUSH -1
 
 /* to change current directory task 10 */
 int _ourcd(info_t *);
